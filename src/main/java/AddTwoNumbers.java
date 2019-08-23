@@ -13,7 +13,7 @@ public class AddTwoNumbers {
             int x = (p != null) ? p.val : 0;
             int y  = (q != null) ? q.val : 0;
             int value = (x + y + overflow) % 10;
-            overflow = (x + y) / 10;
+            overflow = (x + y + overflow) / 10;
             resultCurrentNode.next = new ListNode(value % 10);
             resultCurrentNode = resultCurrentNode.next;
             if (p != null) p = p.next;
